@@ -23,6 +23,7 @@ body {
 .header {
   background: pink;
   height: 15vh; 
+  padding: 0 30px; 
 }
 
 /* 비주얼 */
@@ -41,6 +42,9 @@ body {
   align-items: flex-start;
   padding: 30px;
 }
+.group {
+  margin: 0 15px;
+}
 .group1{
   background-color: violet;
   width: 250px;
@@ -58,6 +62,7 @@ body {
 .slogan {
   background: skyblue;
   height: 10vh;
+  clear: both;
 }
 
 /* 푸터 */
