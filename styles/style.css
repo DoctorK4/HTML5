@@ -1,30 +1,89 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
+
 
 /* 기본 스타일 */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
+/* 링크 스타일 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* 본문 스타일*/
 body {
-  background: #ffc;
+  background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-weight: 400;
+  color: #212121;
 }
 
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner {
-  width: 880px;
+  width: 940px;
   margin: 0 auto;
 }
 
 /* 헤더 */
 .header {
-  background: pink;
+  background: #fff;
   height: 15vh; 
-  padding: 0 30px; 
+  padding: 0 30px;
+  border-radius: 0 0 15px 15px; 
 }
+
+.member {
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.member li::before {
+  content: "\e800";
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+}
+
+.member a { 
+  text-transform: uppercase;
+}
+
+/* .member li ::before {
+  content: ":";
+} */
+
+/* li -> 1점 .first -> 10점 ::before-> 1점 = 12점
+li.first::before {
+  content: "";
+} */
+
+/* .member .first ::before {
+  content: "" !important;
+} */
+
+/* 3번째 아이템부터 뒤로 몽땅 선택 */
+/* .member li:nth-child(odd){
+  background-color: skyblue;
+} */
+
+/* .member li:nth-child(n + 2)::before {
+  content: ":";
+  background-color: skyblue;
+} */
+
+/* .member li:nth-child(n + 2):nth-child(-n + 4) {
+  background-color: yellow;
+} */
 
 /* 비주얼 */
 .visual {
@@ -42,9 +101,7 @@ body {
   align-items: flex-start;
   padding: 30px;
 }
-.group {
-  margin: 0 15px;
-}
+
 .group1{
   background-color: violet;
   width: 250px;
@@ -68,8 +125,13 @@ body {
 /* 푸터 */
 .footer {
   background: gray;
+  width: 940px;
+  margin: 0 auto;
 }
 .footer-inner {
   background: silver;
   height: 15vh;
+  position: relative;
+  top: -10px;
+  left: -10px;
 }
