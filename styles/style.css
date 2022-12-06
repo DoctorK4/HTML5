@@ -1,9 +1,20 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
+/* 숨김 콘텐츠 */
+.a11y-hidden {
+  background-color: yellow;
+  position: absolute;
+  top: -9999em;
+}
+
 /* 기본 스타일 */
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
 }
 /* 링크스타일 */
 a{
@@ -12,6 +23,8 @@ a{
 }
 /* 본문 스타일*/
 body {
+  /* em, rem 단위를 사용해보기 */
+  font-size: 1.4rem;
   color: #212121;
   background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -28,7 +41,6 @@ body {
 .header {
   background: #fff;
   padding: 0 30px;
-  height: 15vh; 
   border-radius: 0 0 15px 15px;
   position: relative;
 }
@@ -41,7 +53,6 @@ body {
 
 /* 텍스트 링크모음 */
 .member{
-  background-color: aqua;
   text-align: right;
   padding: 4px 0px;
   /* position 속성을 활용하여 .member 영역을 오른쪽으로 10px만큼 이동하기  */
