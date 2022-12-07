@@ -79,18 +79,13 @@ body {
   text-transform: uppercase;
 }
 
-/* 마지막 li 요소에 포함된 a 요소를 선택하여 오른쪽 padding값을 0으로 재정의하는 방법 */
-/* .member li:last-child a {
-  padding-right: 0;
-} */
-
 .divider{
   margin-right: 4px;
 }
 
 /* 메인 메뉴 */
 .navigation {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
 .menu {
@@ -141,9 +136,9 @@ body {
 }
 
 .sub-menu {
-  background-color: pink;
   position: absolute;
   display: none;
+  padding: 4px 0;
   top: 47px;
 }
 
@@ -158,7 +153,11 @@ right: 0;
 .sub-menu li {
   display: inline-block;
   padding-left: 1em;
-  background-color: gold;
+}
+
+.sub-menu a {
+  display: inline-block;
+  padding: 6px 0;
 }
 
 .sub-menu a::before {
@@ -195,6 +194,10 @@ right: 0;
   content: "\e801";
 }
 
+.sub-menu a:hover, .sub-menu a:focus {
+  color: #f00;
+}
+
 .is-active .sub-menu {
   display: block;
   white-space: nowrap;
@@ -225,7 +228,6 @@ right: 0;
   width: 300px;
   }
 .group3{
-  background-color: gold;
   width: 180px;
   }
 
