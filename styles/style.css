@@ -321,13 +321,9 @@ right: 0;
 }
 .user-email,.user-pw {
   margin-bottom: 5px;
-  background-color: skyblue;
 }
 
-.user-pw {
-}
 .login-form label {
-  background-color: salmon;
   width: 4em;
   display: inline-block;
 }
@@ -363,7 +359,7 @@ right: 0;
   background-color: white;
   border-radius: 0 0 5px 5px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row nowrap; 
   padding: 4px 10px;
   justify-content: space-between;
 }
@@ -377,7 +373,30 @@ right: 0;
   content: "\e804";
   font-family: "fontello";
   margin-right: 8px;
-  color: orangered; }
+  color: orangered; 
+}
+/* 유효성 검사 배너*/
+.validation-list {
+  margin-top: 25px;
+  border-top: 1px solid transparent;
+}
+
+.validation-list li {
+  margin-top: 10px;
+}
+
+.validation-list a {
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 30px;
+  background: url(./images/validation_icon.png) no-repeat 25px 50%, #ccc linear-gradient(to bottom, #ccc, #eee);  
+  padding: 8px 15px 8px 50px;
+}
+
+.validation-list a:hover, .validation-list a:focus {
+  color: red;
+  border: 1px solid #212121;
+}
 
 /* 슬로건 */
 .slogan {
