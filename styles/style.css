@@ -423,10 +423,26 @@ right: 0;
   display: flow-root;
 }
 
-.term-list-subject {
+.term-list-subject , .term-list-brief {
   background-color: lime;
   float: right;
   width: 145px;
+}
+
+.even .term-list-subject, .even .term-list-brief {
+  background-color: lime;
+  float: left;
+  width: 145px;
+}
+
+.term-list-subject {
+  font-weight: 500;
+  color: #296897;
+}
+
+.term-list-brief {
+  line-height: 1.5;
+  margin-top: 5px;
 }
 
 .term-list-thumbnail {
@@ -434,14 +450,13 @@ right: 0;
   float: left;
 }
 
-.term-list-thumbnail img {
-  vertical-align: middle;
+.even .term-list-thumbnail {
+  background-color: purple;
+  float: right;
 }
 
-.term-list-brief {
-  background-color: coral;
-  float: right;
-  width: 145px;
+.term-list-thumbnail img {
+  vertical-align: middle;
 }
 
 /* 슬로건 */
